@@ -1,0 +1,158 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = 'Sorozat k'#246'vet'#337
+  ClientHeight = 411
+  ClientWidth = 465
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  OnClose = FormClose
+  DesignerMasterStyle = 0
+  object Label1: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.Y = 8.000000000000000000
+    Size.Width = 233.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 20.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'Sorozatok'
+    TabOrder = 1
+  end
+  object ComboBox1: TComboBox
+    Position.X = 24.000000000000000000
+    Position.Y = 56.000000000000000000
+    Size.Width = 185.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    OnChange = ComboBox1Change
+  end
+  object title: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.Y = 104.000000000000000000
+    Size.Width = 233.000000000000000000
+    Size.Height = 40.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 20.000000000000000000
+    TextSettings.HorzAlign = Center
+    TextSettings.WordWrap = False
+    Text = 'C'#205'M'
+    TabOrder = 3
+  end
+  object Label2: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 16.000000000000000000
+    Position.Y = 168.000000000000000000
+    Size.Width = 105.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 20.000000000000000000
+    Text = #201'vad'
+    TabOrder = 5
+  end
+  object evadEdit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 7
+    Position.X = 120.000000000000000000
+    Position.Y = 168.000000000000000000
+    Size.Width = 97.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label3: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 16.000000000000000000
+    Position.Y = 224.000000000000000000
+    Size.Width = 105.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 20.000000000000000000
+    Text = 'Epiz'#243'd'
+    TabOrder = 4
+  end
+  object epizodEdit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 6
+    Position.X = 120.000000000000000000
+    Position.Y = 224.000000000000000000
+    Size.Width = 97.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object save: TButton
+    Position.X = 8.000000000000000000
+    Position.Y = 280.000000000000000000
+    Size.Width = 217.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 9
+    Text = 'Ment'#233's'
+    OnClick = saveClick
+  end
+  object deleteBtn: TButton
+    StyledSettings = [Family, Size, Style]
+    Position.X = 8.000000000000000000
+    Position.Y = 328.000000000000000000
+    Size.Width = 217.000000000000000000
+    Size.Height = 38.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 8
+    Text = 'T'#246'rl'#233's'
+    TextSettings.FontColor = claCrimson
+    OnClick = deleteBtnClick
+  end
+  object Label4: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 232.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 233.000000000000000000
+    Size.Height = 25.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 20.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = #218'j sorozat'
+    TabOrder = 0
+  end
+  object Line1: TLine
+    LineType = Left
+    Position.X = 232.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 25.000000000000000000
+    Size.Height = 465.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object Label5: TLabel
+    StyledSettings = [Family, Style, FontColor]
+    Position.X = 232.000000000000000000
+    Position.Y = 104.000000000000000000
+    Size.Width = 233.000000000000000000
+    Size.Height = 49.000000000000000000
+    Size.PlatformDefault = False
+    TextSettings.Font.Size = 30.000000000000000000
+    TextSettings.HorzAlign = Center
+    Text = 'C'#237'm'
+    TabOrder = 11
+  end
+  object newEdit: TEdit
+    Touch.InteractiveGestures = [LongTap, DoubleTap]
+    TabOrder = 12
+    Position.X = 248.000000000000000000
+    Position.Y = 168.000000000000000000
+    Size.Width = 201.000000000000000000
+    Size.Height = 33.000000000000000000
+    Size.PlatformDefault = False
+  end
+  object newSave: TButton
+    Position.X = 240.000000000000000000
+    Position.Y = 296.000000000000000000
+    Size.Width = 217.000000000000000000
+    Size.Height = 57.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 13
+    Text = #218'j sorozat hozz'#225'ad'#225'sa'
+    OnClick = newSaveClick
+  end
+end
