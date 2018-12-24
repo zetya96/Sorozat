@@ -57,6 +57,7 @@ type
     // sorozatok listája
     sorozatlista : TList;
     kivalasztva : TSorozat;    //éppen kiválasztott sorozat
+
     // procedure
     procedure FillComboBox; //combobox feltöltése lista alapján
     procedure ChangeComponents(enable : Boolean); //UI elemek ki/be kapcsolása
@@ -95,15 +96,17 @@ var
 begin
   lista := TList.Create;
   deserializer := TStringList.Create;
-
-  deserializer.LoadFromFile(filename);
-  for i := 0 to deserializer.Count-1 do
+  if FileExists(filename) then
   begin
-  soradat := deserializer[i].Split(['_'],3);
-    lista.Add(TSorozat.Create(soradat[0],soradat[1].ToInteger,soradat[2].ToInteger()));
-    ShowMessage(soradat[0]);
-  end;
+    deserializer.LoadFromFile(filename);
+    for i := 0 to deserializer.Count-1 do
+    begin
+    soradat := deserializer[i].Split(['_'],3);
+      lista.Add(TSorozat.Create(soradat[0],soradat[1].ToInteger,soradat[2].ToInteger()));
 
+    end;
+
+  end;
   Result := lista;
 end;
 
@@ -146,6 +149,7 @@ procedure TForm1.FormClose(Sender: TObject; var Action: TCloseAction);
 begin
   SerializeSorozatList(sorozatlista,'database.db');
 end;
+
 
 
 //--combobox feltöltése lista alapján-----------------------------------------------------
